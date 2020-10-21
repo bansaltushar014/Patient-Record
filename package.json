@@ -10,7 +10,9 @@
     "cors": "^2.8.5",
     "materialize-css": "^1.0.0",
     "react": "^16.14.0",
+    "react-csv": "^2.0.3",
     "react-dom": "^16.14.0",
+    "react-js-pagination": "^3.0.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
