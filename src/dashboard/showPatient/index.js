@@ -10,13 +10,14 @@ function ShowPatient() {
   const [activePage, setactivePage] = ('');
 
   useEffect(() => {
+    if(JSON.parse(localStorage.getItem('PatientData')))
     setpatientData(JSON.parse(localStorage.getItem('PatientData')));
     document.addEventListener('DOMContentLoaded', function () {
       var elems = document.querySelectorAll('select');
       var options = {};
       var instances = M.FormSelect.init(elems, options);
     });
-    handlePageChange(1);
+    // handlePageChange(1);
   }, [])
 
 

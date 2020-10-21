@@ -17,8 +17,10 @@ function AddPatient() {
         }
         console.log(data)
         if(!localStorage.getItem('PatientData')){
+            debugger;
             let PatientData = [];
-            localStorage.setItem('PatientData', JSON.stringify(PatientData.push(data)));
+            PatientData = PatientData.concat(data);
+            localStorage.setItem('PatientData', JSON.stringify(PatientData));
         } else {
             let PatientData = localStorage.getItem('PatientData');            
             localStorage.setItem('PatientData',  JSON.stringify(JSON.parse(PatientData).concat(data)));
