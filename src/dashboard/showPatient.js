@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import M from 'materialize-css';
-import Info from '../PatientDataModal'
+import Info from './patientDataModal'
 import {CSVLink, CSVDownload} from 'react-csv';
 import Pagination from "react-js-pagination";
 

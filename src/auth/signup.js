@@ -41,7 +41,7 @@ function Signup() {
           if(response.data){
             localStorage.setItem('loggedin', true);
             alert("Successful!");
-            window.location = "http://localhost:3000/asda";
+            window.location = "http://localhost:3000/dashboard";
           } else {
             alert(" Failed!");
           }          
@@ -53,10 +53,13 @@ function Signup() {
   return (
     <>
     <div className="row">
-    <form className="col s12" onSubmit={submitForm}>
+      <div className="col s2"> 
+
+      </div>
+    <form className="col s8" onSubmit={submitForm}>
       <div className="row">
         <div className="input-field col s6">
-          <input placeholder="Placeholder" id="first_name" type="text" class="validate" />
+          <input id="first_name" type="text" class="validate" />
           <label for="first_name">First Name</label>
         </div>
         <div className="input-field col s6">
@@ -80,6 +83,9 @@ function Signup() {
       <input type="submit" className="waves-effect waves-light btn" />
      
     </form>
+    <div className="col s2">
+
+    </div>
   </div>
     </>
   );

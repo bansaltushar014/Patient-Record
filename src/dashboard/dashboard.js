@@ -6,13 +6,9 @@ function Dashboard() {
 
     const [AddorShow, setAddorShow] = useState(false);
     
-    
-
     const Add = () => {
         setAddorShow(true);
     }
-
-    
 
     const Show = () => {
         setAddorShow(false);

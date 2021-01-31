@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
-import Login from '../auth/login';
-import Signup from '../auth/signup';
-import Logout from '../auth/logout';
-import Dashboard from '../dashboard';
+import Login from './auth/login';
+import Signup from './auth/signup';
+import Logout from './auth/logout';
+import Dashboard from './dashboard/dashboard';
+import './css/navbar.css';
 
 function App() {
 
@@ -14,18 +15,23 @@ function App() {
         console.log("logged value " + localStorage.getItem('loggedin'));
     }, [])
 
-    return (
+    return (        
         <>
             <Router>
+            <div class="row">
                 {!loggedValue &&
-                    <>
-                        <Link to='/login'>Login</Link>
+                    <div className="col s6 offset-s3 header"> 
+                        <Link to='/login'>Login</Link> 
+                            &nbsp; &nbsp;
                         <Link to='/signup'>Signup</Link>
-                    </>
+                    </div>
                 }
                 {loggedValue &&
+                    <div className="col s6 offset-s3 header">
                     <Link to='/logout'>Logout</Link>
+                    </div>
                 }
+                </div>
                 <div>
                     <Switch>
                         <Route exact path='/' component={Login} />
